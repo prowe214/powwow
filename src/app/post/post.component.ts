@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-post',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.less']
 })
 export class PostComponent implements OnInit {
+  @Input() postData: FirebaseListObservable<any[]>;
   testPost: IPost;
   testData: IPost[] = [];
-  
+
   constructor() {
     this.testPost = {
       title: "Sample Post",
@@ -32,5 +34,6 @@ export class PostComponent implements OnInit {
 export interface IPost {
   title: string,
   previewUrl: string,
-  description: string
+  description: string,
+  postData: FirebaseListObservable<any[]>
 }
