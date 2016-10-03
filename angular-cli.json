@@ -15,9 +15,14 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
+        "../node_modules/bootstrap/less/bootstrap.less",
+        "./app/shared/styles/variables.less",
+        "./app/shared/styles/slate-theme.less",
         "styles.less"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/bootstrap/dist/js/bootstrap.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
