@@ -2,4 +2,9 @@
   feed works!
 </p>
 
-<app-post &ngFor="let post of posts" [postData]="post"></app-post>
+<div class="row">
+  <app-post 
+    *ngFor="let post of posts | async" 
+    [postData]="post"
+    ></app-post>
+</div>

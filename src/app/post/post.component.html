@@ -1,11 +1,23 @@
-<div class="post">
-  <div class="title">
-    {{postData.title}}
+<div class="post col-sm-6 panel panel-primary">
+  <div class="row">
+    <div class="panel-heading" [ngClass]="'category-' + postData.category">
+      <h3 class="panel-title">
+        {{postData.title}}
+      </h3>
+    </div>
   </div>
-  <div class="preview">
-    <img src="{{postData.previewUrl}}" alt="preview alt">
-  </div>
-  <div class="description">
-    {{postData.description}}
+  <div class="row">
+    <div class="panel-body">
+      <div class="preview-container col-xs-4" >
+        <div class="preview" [ngStyle]="{backgroundImage: 'url( '+postData.previewUrl+')'}"></div>
+      </div>
+      <div class="col-xs-8">
+        <div class="description">
+          <p>
+            {{postData.description}}
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,7 +1,5 @@
 <h1>
   {{title}}
 </h1>
-<p *ngFor="let item of posts | async">
-  {{item.title}}
-</p>
-<app-post></app-post>
+<button class="btn btn-primary" (click)="generatePosts()">Generate a new post!</button>
+<app-feed></app-feed>
