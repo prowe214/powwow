@@ -16,9 +16,3 @@ export class PostComponent {
   }
 
 }
-
-export interface IPost {
-  title: string,
-  previewUrl: string,
-  description: string
-}

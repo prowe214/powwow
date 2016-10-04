@@ -1,20 +1,24 @@
 .post {
   height: 150px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   .panel-body {
     padding: 0;
-
+    flex: 1;
   }
 
   .preview-container {
+    background-color: red;
+    padding: 0;
     display: flex;
   }
 
   .preview {
+    flex: 1;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    flex: 1;
   }
 
   .description {
