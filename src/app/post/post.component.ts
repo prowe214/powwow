@@ -8,6 +8,9 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class PostComponent {
   @Input() postData: any;
+  title: string;
+  previewUrl: string;
+  description: string;
 
   constructor() {
   }
