@@ -1,10 +1,13 @@
 <div class="post panel panel-primary">
   <div class="panel-heading" [ngClass]="'category-' + postData.category">
     {{postData.title}}
+    <div>
+      {{'appTitle' | translate}}
+    </div>
   </div>
   <div class="panel-body">
       <div class="preview-container col-xs-4">
-        <div class="preview" [ngStyle]="{backgroundImage: 'postData.previewUrl'}"></div>
+        <div class="preview" [style.backgroundImage]="previewUrl"></div>
       </div>
       <div class="col-xs-8">
         <div class="description">
